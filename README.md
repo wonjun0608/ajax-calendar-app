@@ -11,7 +11,7 @@ This project is a full-stack calendar web application where users can register, 
 ## Extended Features
 
 ### Event Tagging & Filtering
- We added a tagging function that lets users categorize their events as Work, Event, Meeting, or Other.
+ I added a tagging function that lets users categorize their events as Work, Event, Meeting, or Other.
  When a user adds a new event, if no tag is selected, the system automatically assigns the default tag “Work.”
  On the main calendar view, there are checkbox filters for each tag type displayed above the calendar. 
  When the page first loads, bascially every tags are selected by default, showing every event. 
