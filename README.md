@@ -14,20 +14,29 @@ giving a smooth, single page experience.
 ## Extended Features
 
 ### Event Tagging & Filtering
-Events can be categorized using tags such as **Work, Meeting, Event,** and **Other**.
-If no tag is selected, a default tag (**Work**) is assigned automatically.
-Users can dynamically filter events by tag using checkbox controls, making it
-easy to focus on specific types of activities.
+ We added a tagging function that lets users categorize their events as Work, Event, Meeting, or Other.
+ When a user adds a new event, if no tag is selected, the system automatically assigns the default tag “Work.”
+ On the main calendar view, there are checkbox filters for each tag type displayed above the calendar. 
+ When the page first loads, bascially every tags are selected by default, showing every event. 
+ The user can then toggle the checkboxes to display only the categories they want to see.
 
 ### Group Events
-Users can create shared group events that appear on multiple users’ calendars.
-Group events are marked with **[Group]** and are editable only by the event creator
-to maintain consistency. Participants may remove the event from their own calendar
-without affecting others.
+In addition to personal events, users can create shared group events that appear
+on multiple users’ calendars. When adding an event, the creator can select
+**“Save as Group Event”** and enter the usernames of other participants separated
+by commas. The system stores the event in the events table and links each
+participant’s `user_id` through a `group_events` table, allowing the event to
+appear on all participants’ calendars.  
+Group events are marked with **[Group]** to distinguish them from personal
+events. To avoid inconsistencies, only the event creator can edit group event
+details such as the title, time, date, or color. However, each participant may
+remove the group event from their own calendar without affecting others.
 
 ### Calendar Sharing
-Users can share their entire calendar with other users by username.
-Shared users can view all events from the owner’s calendar within their own
+Users can share their entire calendar with other users through a **Share
+Calendar** section on the page. By entering another user’s username and clicking
+the Share button, the system links the two accounts in the database, allowing the
+shared user to view all events from the owner’s calendar within their own
 calendar view.
 
 ### Event Coloring
