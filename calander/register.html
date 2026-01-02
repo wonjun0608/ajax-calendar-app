@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register – Calendar App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>Create Account</h2>
+  <input type="text" id="username" placeholder="Username" required><br><br>
+  <input type="email" id="email" placeholder="Email" required><br><br>
+  <input type="password" id="password" placeholder="Password" required><br><br>
+  <button id="registerBtn">Register</button>
+  <p>Already have an account? <a href="login.html">Login here</a></p>
+  <p id="msg" style="color:red;"></p>
+
+  
+  
+  <script>
+    document.getElementById('registerBtn').onclick = async () => {
+      const u = document.getElementById('username').value.trim();
+      const e = document.getElementById('email').value.trim();
+      const p = document.getElementById('password').value;
+      const form = new FormData();
+      form.append('username', u);
+      form.append('email', e);
+      form.append('password', p);
+
+      const r = await fetch('./php/register.php', { method: 'POST', body: form });
+      const data = await r.json();
+      if (data.success) window.location.href = 'main.php';
+      else document.getElementById('msg').textContent = data.message;
+    };
+  </script>
+</body>
+</html>

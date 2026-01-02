@@ -1,0 +1,27 @@
+
+.color-picker {
+  display: flex;
+  gap: 8px;
+  margin: 10px auto;
+  justify-content: center;
+
+}
+
+
+.color-option {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.color-option:hover {
+  transform: scale(1.15);
+}
+
+.color-option.selected {
+  border: 2px solid black;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
