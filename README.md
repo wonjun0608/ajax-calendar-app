@@ -38,7 +38,7 @@ calendar view.
 
 ### Event Coloring
 Events support customizable colors (**blue, green, yellow, red, purple**) for
-better visual organization. A default color (**blue**) is applied if none is selected.
+better visual organization. A default color(blue) is applied if none is selected.
 For group events, color changes made by the creator automatically propagate
 to all participants’ calendars.
 
