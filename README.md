@@ -1,5 +1,5 @@
 ## Overview
-This project is a full-stack calendar web application where users can register, log in, and create, edit, or delete their own events. It uses JavaScript and AJAX to communicate with the server and update the calendar in real time without reloading the page, providing a smooth single-page user experience.
+This project is a full-stack calendar web application where users can register, log in, and create, edit, or delete their own events. It uses JavaScript and AJAX to communicate with the server and update the calendar in real time without reloading the page, giving a smooth singl page user experience.
 
 ## Key Features
 - Month-by-month calendar view with unlimited navigation
